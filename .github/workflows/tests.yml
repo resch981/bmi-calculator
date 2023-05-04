@@ -1,9 +1,11 @@
 name: tests
 
-on: [push]
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
-  check-bmiCalc&Cat:
+  check-bmi-functions:
     runs-on: ubuntu-latest
     steps:
       - uses: resch981/bmi-calculator/tests.R
