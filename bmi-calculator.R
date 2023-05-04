@@ -26,9 +26,9 @@ bmidata <- bind_cols(bmi = bmidata)
 bmiCat <- function(bmi) {
   catd <- bmi %>% 
     mutate(cat = case_when(bmi <= 0 ~ "NA", 
-           bmi > 0 & bmi < 18.5 ~ "A",
-           bmi >= 18.5 & bmi < 25 ~ "B",
-           bmi >= 25 & bmi < 30 ~ "C",
+           bmi > 0 && bmi < 18.5 ~ "A",
+           bmi >= 18.5 && bmi < 25 ~ "B",
+           bmi >= 25 && bmi < 30 ~ "C",
            bmi >= 30 ~ "D"))
   return(catd)
 }
