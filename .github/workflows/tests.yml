@@ -6,6 +6,10 @@ on:
 
 jobs:
   check-bmi-functions:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     steps:
-      - uses: resch981/bmi-calculator/tests.R
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Tests
+        uses: resch981/bmi-calculator/tests@9ba52f055ab063a37fadcb712437cfe306aed279
